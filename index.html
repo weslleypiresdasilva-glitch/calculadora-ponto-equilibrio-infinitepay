@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Ponto de Equilíbrio: saiba quanto precisa vender</title>
+<meta name="description" content="Calcule o ponto de equilíbrio do seu negócio e descubra quantas vendas e quanto de faturamento você precisa para cobrir seus custos.">
+<meta name="robots" content="index, follow">
+<!-- Canonical intencionalmente omitido: adicionar apenas quando existir uma URL pública real desta página. -->
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de Ponto de Equilíbrio: saiba quanto precisa vender">
+<meta property="og:description" content="Calcule o ponto de equilíbrio do seu negócio e descubra quantas vendas e quanto de faturamento você precisa para cobrir seus custos.">
+<meta property="og:locale" content="pt_BR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "O que é ponto de equilíbrio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ponto de equilíbrio, ou break-even point, é o nível de vendas em que a receita de um negócio se iguala aos custos considerados no cálculo. Nesse ponto, não há prejuízo nem lucro em relação a essas premissas: tudo o que é vendido acima dele passa a contribuir para um resultado positivo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como calcular o ponto de equilíbrio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Some os custos fixos mensais do negócio, calcule a margem de contribuição (preço de venda menos custo variável por unidade) e divida os custos fixos pela margem de contribuição para obter a quantidade de vendas necessária. Para o valor em faturamento, divida os custos fixos pela margem de contribuição percentual."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual a diferença entre ponto de equilíbrio e margem de contribuição?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A margem de contribuição é o valor que sobra de cada venda depois de descontar os custos variáveis dela. O ponto de equilíbrio é o resultado de dividir os custos fixos por essa margem: ele mostra quantas vendas, com essa margem, são necessárias para cobrir os custos fixos do período."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual a diferença entre ponto de equilíbrio contábil, financeiro e econômico?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O ponto de equilíbrio contábil considera custos e despesas registrados contabilmente. O financeiro foca nos custos e despesas que representam desembolso efetivo de caixa, excluindo itens não desembolsáveis conforme a metodologia adotada. O econômico acrescenta o custo de oportunidade à análise. Esta calculadora usa uma abordagem simplificada baseada apenas nos valores informados."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quando devo recalcular o ponto de equilíbrio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vale recalcular sempre que custos fixos mudarem (como aluguel ou folha), quando o preço de venda for revisado, quando custos variáveis, comissões ou taxas se alterarem, ou periodicamente como parte do acompanhamento financeiro do negócio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como diminuir o ponto de equilíbrio da empresa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "De forma geral, o ponto de equilíbrio cai quando os custos fixos são reduzidos, quando a margem de contribuição aumenta (por reajuste de preço ou redução de custos variáveis) ou por uma combinação das duas frentes. A decisão ideal depende do contexto de cada negócio."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#calculadora">Pular para a calculadora</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <span class="brand">Case técnico · SEO/Growth</span>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap">
+      <h1>Calculadora de Ponto de Equilíbrio</h1>
+      <p class="hero-lead">Descubra quanto seu negócio precisa vender para cobrir os custos e começar a gerar resultado positivo.</p>
+    </div>
+  </section>
+
+  <section id="calculadora" class="calculator-section" aria-labelledby="calculadora-heading">
+    <div class="wrap">
+      <div class="calc-card">
+
+        <div class="calc-form-col">
+          <h2 id="calculadora-heading">Preencha os dados do seu negócio</h2>
+          <form id="pe-form" novalidate>
+
+            <div class="field">
+              <label for="custos-fixos">Custos fixos mensais (R$)</label>
+              <input type="text" inputmode="decimal" id="custos-fixos" name="custos-fixos" placeholder="Ex.: 9.000,00" autocomplete="off">
+              <p class="help">Ex.: aluguel, salários, sistemas e outras despesas que não variam diretamente com as vendas.</p>
+            </div>
+
+            <div class="field">
+              <label for="preco-venda">Preço médio de venda por unidade (R$)</label>
+              <input type="text" inputmode="decimal" id="preco-venda" name="preco-venda" placeholder="Ex.: 150,00" autocomplete="off">
+              <p class="help">Quanto você cobra, em média, por produto ou serviço vendido.</p>
+            </div>
+
+            <div class="field">
+              <label for="custo-variavel">Custo variável por unidade (R$)</label>
+              <input type="text" inputmode="decimal" id="custo-variavel" name="custo-variavel" placeholder="Ex.: 60,00" autocomplete="off">
+              <p class="help">Ex.: produto ou matéria-prima, impostos, comissões e taxas relacionadas à venda.</p>
+            </div>
+
+            <div id="form-error" class="form-error" role="alert" hidden></div>
+
+            <button type="submit" class="btn-primary">Calcular ponto de equilíbrio</button>
+          </form>
+        </div>
+
+        <div class="calc-result-col">
+          <div id="result-empty" class="result-empty">
+            <p>Preencha os campos ao lado para ver o ponto de equilíbrio do seu negócio.</p>
+          </div>
+
+          <div id="result-panel" class="result-panel" hidden aria-live="polite">
+            <p class="result-headline" id="result-headline"></p>
+            <p class="result-sub" id="result-sub"></p>
+
+            <dl class="result-grid">
+              <div class="result-item">
+                <dt>Margem de contribuição por venda</dt>
+                <dd id="res-margem-unit">—</dd>
+              </div>
+              <div class="result-item">
+                <dt>Margem de contribuição</dt>
+                <dd id="res-margem-pct">—</dd>
+              </div>
+              <div class="result-item">
+                <dt>Quantidade mínima de vendas</dt>
+                <dd id="res-qtd">—</dd>
+              </div>
+              <div class="result-item">
+                <dt>Faturamento necessário</dt>
+                <dd id="res-faturamento">—</dd>
+              </div>
+            </dl>
+
+            <p class="result-note" id="result-rounding" hidden></p>
+
+            <p class="result-interpretation">Abaixo desse ponto, a receita não cobre todos os custos considerados. Ao atingir o ponto de equilíbrio, receitas e custos se igualam. Acima dele, as vendas adicionais passam a contribuir para um resultado positivo, considerando as premissas informadas.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" aria-labelledby="o-que-e">
+    <div class="wrap prose">
+      <h2 id="o-que-e">O que é ponto de equilíbrio?</h2>
+      <p>Ponto de equilíbrio, também chamado de break-even point, é o momento em que as receitas de um negócio cobrem os custos considerados no cálculo. Nesse ponto, o negócio não apresenta prejuízo nem lucro em relação a essas premissas — as vendas realizadas pagam exatamente o que foi gasto.</p>
+      <p>Saber esse valor ajuda a estabelecer metas de vendas realistas, avaliar se um preço faz sentido, entender o peso dos custos fixos e variáveis e acompanhar a sustentabilidade da operação ao longo do tempo.</p>
+    </div>
+  </section>
+
+  <section class="content-section alt" aria-labelledby="como-calcular">
+    <div class="wrap prose">
+      <h2 id="como-calcular">Como calcular o ponto de equilíbrio?</h2>
+      <ol class="steps">
+        <li>Identifique os custos fixos do período.</li>
+        <li>Identifique o custo variável por venda.</li>
+        <li>Calcule a margem de contribuição (preço de venda menos custo variável).</li>
+        <li>Divida os custos fixos pela margem de contribuição.</li>
+      </ol>
+
+      <div class="formula-box">
+        <p class="formula">Ponto de equilíbrio em unidades = Custos fixos ÷ (Preço de venda − Custo variável)</p>
+        <p class="formula">Ponto de equilíbrio em faturamento = Custos fixos ÷ Margem de contribuição percentual</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" aria-labelledby="exemplo">
+    <div class="wrap prose">
+      <h2 id="exemplo">Exemplo de cálculo do ponto de equilíbrio</h2>
+      <p>Considere um negócio com os seguintes valores:</p>
+      <ul class="example-list">
+        <li>Custos fixos mensais: R$ 9.000</li>
+        <li>Preço de venda: R$ 150</li>
+        <li>Custo variável: R$ 60</li>
+      </ul>
+      <p>Margem de contribuição: R$ 150 − R$ 60 = <strong>R$ 90</strong></p>
+      <p>Ponto de equilíbrio: R$ 9.000 ÷ R$ 90 = <strong>100 unidades</strong></p>
+      <p>Faturamento no ponto de equilíbrio: 100 × R$ 150 = <strong>R$ 15.000</strong></p>
+      <p>Ou seja, nesse cenário, o negócio precisa de 100 vendas e R$ 15.000 de faturamento no período para cobrir os custos considerados no cálculo.</p>
+    </div>
+  </section>
+
+  <section class="content-section alt" aria-labelledby="entenda-valores">
+    <div class="wrap prose">
+      <h2 id="entenda-valores">Entenda os valores usados no cálculo</h2>
+
+      <h3>Custos fixos</h3>
+      <p>São despesas que não variam diretamente com o volume de vendas, como aluguel, salários, softwares e contratos recorrentes. Eles existem independentemente de quanto o negócio vende no período.</p>
+
+      <h3>Custos variáveis</h3>
+      <p>Variam de acordo com o volume de vendas. Podem incluir matéria-prima ou produto, comissões, impostos relacionados à venda e taxas de pagamento.</p>
+
+      <h3>Margem de contribuição</h3>
+      <p>É o valor que sobra de cada venda depois de descontar os custos variáveis dela. Essa margem contribui primeiro para cobrir os custos fixos do período — e, depois de cobri-los, passa a contribuir para o resultado.</p>
+    </div>
+  </section>
+
+  <section class="content-section" aria-labelledby="tipos">
+    <div class="wrap prose">
+      <h2 id="tipos">Tipos de ponto de equilíbrio</h2>
+      <p>Existem diferentes abordagens para calcular o ponto de equilíbrio, dependendo de quais custos entram na conta. Esta seção é educativa — a calculadora desta página usa uma abordagem simplificada baseada apenas nos valores que você informa.</p>
+
+      <h3>Ponto de equilíbrio contábil</h3>
+      <p>Considera os custos e despesas contábeis do negócio para determinar o momento em que receitas e gastos se igualam.</p>
+
+      <h3>Ponto de equilíbrio financeiro</h3>
+      <p>Foca nos custos e despesas que representam desembolso efetivo de caixa, excluindo itens não desembolsáveis conforme a metodologia adotada.</p>
+
+      <h3>Ponto de equilíbrio econômico</h3>
+      <p>Acrescenta o custo de oportunidade à análise, considerando o retorno que os recursos investidos no negócio poderiam ter em outra alternativa.</p>
+    </div>
+  </section>
+
+  <section class="content-section alt" aria-labelledby="como-usar">
+    <div class="wrap prose">
+      <h2 id="como-usar">Como usar o ponto de equilíbrio no seu negócio?</h2>
+      <ul class="usage-list">
+        <li><strong>Defina metas mínimas de vendas</strong> a partir da quantidade necessária para cobrir os custos do período.</li>
+        <li><strong>Teste mudanças de preço</strong> e veja como elas afetam a margem de contribuição e o ponto de equilíbrio.</li>
+        <li><strong>Entenda o impacto de custos</strong> fixos e variáveis antes de assumir novos compromissos.</li>
+        <li><strong>Avalie descontos</strong> considerando quanto eles reduzem a margem de contribuição por venda.</li>
+        <li><strong>Simule decisões</strong> que aumentem custos fixos, como contratar uma nova assinatura ou expandir o time.</li>
+        <li><strong>Acompanhe mudanças na operação</strong> recalculando o ponto de equilíbrio periodicamente.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="related-section" aria-labelledby="related-heading">
+    <div class="wrap">
+      <h2 id="related-heading">Continue cuidando das finanças do seu negócio</h2>
+      <ul class="related-grid">
+        <li class="related-card">
+          <a href="https://www.infinitepay.io/blog/ponto-de-equilibrio-contabil">
+            <span class="related-title">Ponto de equilíbrio contábil</span>
+            <span class="related-desc">O conteúdo editorial da InfinitePay sobre o tema, para quem quer se aprofundar na teoria por trás do cálculo.</span>
+          </a>
+        </li>
+        <li class="related-card">
+          <a href="https://www.infinitepay.io/blog/despesas-fixas">
+            <span class="related-title">Despesas fixas e variáveis</span>
+            <span class="related-desc">Ajuda a identificar corretamente os custos que entram nos campos desta calculadora.</span>
+          </a>
+        </li>
+        <li class="related-card">
+          <a href="https://www.infinitepay.io/materiais/calculadora-de-margem-de-lucro">
+            <span class="related-title">Calculadora de margem de lucro</span>
+            <span class="related-desc">O próximo passo natural depois do ponto de equilíbrio: entender a rentabilidade do negócio.</span>
+          </a>
+        </li>
+        <li class="related-card">
+          <a href="https://www.infinitepay.io/materiais/calculadora-de-preco-de-venda">
+            <span class="related-title">Calculadora de preço de venda</span>
+            <span class="related-desc">Para testar como mudanças de preço afetam a margem e o ponto de equilíbrio.</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="faq-section" aria-labelledby="faq-heading">
+    <div class="wrap prose">
+      <h2 id="faq-heading">Perguntas frequentes</h2>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>O que é ponto de equilíbrio?</summary>
+          <p>Ponto de equilíbrio, ou break-even point, é o nível de vendas em que a receita de um negócio se iguala aos custos considerados no cálculo. Nesse ponto, não há prejuízo nem lucro em relação a essas premissas: tudo o que é vendido acima dele passa a contribuir para um resultado positivo.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Como calcular o ponto de equilíbrio?</summary>
+          <p>Some os custos fixos mensais do negócio, calcule a margem de contribuição (preço de venda menos custo variável por unidade) e divida os custos fixos pela margem de contribuição para obter a quantidade de vendas necessária. Para o valor em faturamento, divida os custos fixos pela margem de contribuição percentual.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Qual a diferença entre ponto de equilíbrio e margem de contribuição?</summary>
+          <p>A margem de contribuição é o valor que sobra de cada venda depois de descontar os custos variáveis dela. O ponto de equilíbrio é o resultado de dividir os custos fixos por essa margem: ele mostra quantas vendas, com essa margem, são necessárias para cobrir os custos fixos do período.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Qual a diferença entre ponto de equilíbrio contábil, financeiro e econômico?</summary>
+          <p>O ponto de equilíbrio contábil considera custos e despesas registrados contabilmente. O financeiro foca nos custos e despesas que representam desembolso efetivo de caixa, excluindo itens não desembolsáveis conforme a metodologia adotada. O econômico acrescenta o custo de oportunidade à análise. Esta calculadora usa uma abordagem simplificada baseada apenas nos valores informados.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Quando devo recalcular o ponto de equilíbrio?</summary>
+          <p>Vale recalcular sempre que custos fixos mudarem (como aluguel ou folha), quando o preço de venda for revisado, quando custos variáveis, comissões ou taxas se alterarem, ou periodicamente como parte do acompanhamento financeiro do negócio.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Como diminuir o ponto de equilíbrio da empresa?</summary>
+          <p>De forma geral, o ponto de equilíbrio cai quando os custos fixos são reduzidos, quando a margem de contribuição aumenta (por reajuste de preço ou redução de custos variáveis) ou por uma combinação das duas frentes. A decisão ideal depende do contexto de cada negócio.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section" aria-labelledby="cta-heading">
+    <div class="wrap">
+      <h2 id="cta-heading">Transforme planejamento em vendas</h2>
+      <p class="cta-text">Calcular quanto seu negócio precisa vender é o primeiro passo. Conheça as soluções da InfinitePay para receber pagamentos e gerenciar seu negócio.</p>
+      <a class="btn-secondary" href="https://www.infinitepay.io/">Conheça as soluções da InfinitePay</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Projeto desenvolvido como case técnico. Não é uma página oficial da InfinitePay.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
